@@ -2,7 +2,7 @@
 aws3arch es una herramienta de enumeración de Buckets S3 AWS existentes, incluyendo su región asignada.
 <br><br>
 ## Características
-- Reconocimiento de la existencia o no existencia de un Bucket S3
+- Reconocimiento de la existencia o no existencia de un Bucket S3 en AmazonAWS
 - Cada Bucket S3 reconocido como existente, será capaz de encontrar su región correspondiente
 <br><br>
 ## ¿Cómo Funciona?
