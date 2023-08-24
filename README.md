@@ -22,7 +22,7 @@ aws3arch es una herramienta de enumeración de Buckets S3 AWS existentes, incluy
 `
 ```
 ＡＷＳ３ＡＲＣＨ
-________________
+______________
 
 Bucket amazonaws  >> amazonaws.s3.ap-south-1.amazonaws.com
 ```
@@ -31,6 +31,9 @@ Bucket amazonaws  >> amazonaws.s3.ap-south-1.amazonaws.com
 ./aws3arch.sh -r domains.txt
 `
 ```
+ＡＷＳ３ＡＲＣＨ
+______________
+
 Bucket amazonaws  >> amazonaws.s3.ap-south-1.amazonaws.com
 Bucket amazon     >> S3 Bucket amazon does NOT exist
 ```
