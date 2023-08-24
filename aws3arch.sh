@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 #XXXXXX#
 # VARS #
 #XXXXXXX
@@ -49,26 +50,23 @@ if [ "$1" == "-r" ]; then
     input_file="$2"
 
     while IFS= read -r line; do
-
         curl -s "https://${HOST}/$line" | grep -oP ${REGEX} > /dev/null
         if [ $? -eq 0 ]; then
-            echo -n "Bucket $line >> "
+            printf "Bucket %-10s >> " "$line"
             curl ${skH} "Host: $line.${HOST}" "https://${HOST}" | grep -oP ${REGEX}
         else
             echo "S3 Bucket $line does NOT exist"
         fi
     done < "$input_file"
 else
-
     curl -s "https://${HOST}/$1" | grep -oP ${REGEX} > /dev/null
     if [ $? -eq 0 ]; then
         echo -e "ＡＷＳ３ＡＲＣＨ"
         echo -e "________________\n"
-        echo -n "Bucket $1 >> "
+        printf "Bucket %-10s >> " "$1"
         curl ${skH} "Host: $1.${HOST}" "https://${HOST}" | grep -oP ${REGEX}
     else
         echo "S3 Bucket $1 does not exist"
-
         exit 1
     fi
 fi
