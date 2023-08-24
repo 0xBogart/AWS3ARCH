@@ -66,7 +66,7 @@ else
         printf "Bucket %-10s >> " "$1"
         curl ${skH} "Host: $1.${HOST}" "https://${HOST}" | grep -oP ${REGEX}
     else
-        echo "S3 Bucket $1 does not exist"
+        echo "S3 Bucket $1 does NOT exist"
         exit 1
     fi
 fi
