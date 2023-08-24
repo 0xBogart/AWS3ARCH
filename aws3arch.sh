@@ -6,7 +6,6 @@
 #XXXXXXX
 HOST=s3.amazonaws.com
 REGEX='(?<=<Endpoint>).*?(?=<\/Endpoint>)'
-REGXION='(?<=s3-).*?(?=.amazonaws.com)'
 skH='-s -k -H'
 
 
