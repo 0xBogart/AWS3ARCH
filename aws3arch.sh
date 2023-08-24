@@ -8,7 +8,6 @@ HOST=s3.amazonaws.com
 REGEX='(?<=<Endpoint>).*?(?=<\/Endpoint>)'
 REGXION='(?<=s3-).*?(?=.amazonaws.com)'
 skH='-s -k -H'
-REGION=$(curl -s -k -H "Host: $1.${HOST}" "https://${HOST}" | grep -oP ${REGEX} | grep -oP ${REGXION})
 
 
 #XXXXXXXXXXXXXXXXXX#
