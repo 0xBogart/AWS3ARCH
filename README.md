@@ -1,10 +1,35 @@
 # ＡＷＳ３ＡＲＣＨ
 aws3arch es una herramienta de enumeración de Buckets S3 AWS existentes, incluyendo su región asignada.
 
-# Características
+## Características
 - Reconocimiento de la existencia o no existencia de un Bucket S3
 - Cada Bucket S3 reconocido como existente, será capaz de encontrar su región correspondiente
 
-# ¿Cómo Funciona?
+## ¿Cómo Funciona?
 - Lee como primer argumento '$1' el dominio [Es necesario omitir cualquier extensión .com|.es|.net|.org|etc]
 - Lee múltiples dominios desde un fichero
+- La estructura de un fichero deberá contener 1 dominio por linea
+- Si el Bucket S3 no existe, será reportado como NO existente
+
+## Modo de Uso
+./aws3arch.sh domain
+
+./aws3arch -r domains.txt
+
+## Ejemplos
+`
+./aws3arch.sh amazonaws
+`
+```
+ＡＷＳ３ＡＲＣＨ
+________________
+
+Bucket amazonaws  >> amazonaws.s3.ap-south-1.amazonaws.com
+```
+`
+./aws3arch.sh -r domains.txt
+`
+```
+Bucket amazonaws  >> amazonaws.s3.ap-south-1.amazonaws.com
+Bucket amazon     >> S3 Bucket amazon does NOT exist
+```
